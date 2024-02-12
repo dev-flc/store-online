@@ -1,30 +1,23 @@
 import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { ContainerGlobal } from 'Containers/containerGlobal.js'
 import { Home } from 'View/home/home.js'
-import { Route, Routes } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    Component: () => (
+      <ContainerGlobal>
+        <Home />
+      </ContainerGlobal>
+    ),
+    index: true,
+    path: '*'
+  }
+])
 
 const Router = () => {
-  return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <ContainerGlobal>
-            <Home />
-          </ContainerGlobal>
-        }
-      />
-      <Route
-        index
-        path="*"
-        element={
-          <ContainerGlobal>
-            <Home />
-          </ContainerGlobal>
-        }
-      />
-    </Routes>
-  )
+  return <RouterProvider router={router} />
 }
+
 export { Router }

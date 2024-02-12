@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { BrowserRouter } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 import { Router } from 'Routers/router.js'
 import { themeMui } from 'Constants/theme/themeMui.js'
 import { ThemeProvider } from '@mui/material/styles'
 
 import { useStore } from 'Hook/store/useStore.js'
+
+// 3️⃣ Router singleton created
 
 const App = () => {
   const [mapStateToProps] = useStore()
@@ -17,9 +18,7 @@ const App = () => {
     <ThemeProvider theme={themeMui(paletteMode)}>
       <React.Fragment>
         <CssBaseline />
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
+        <Router />
       </React.Fragment>
     </ThemeProvider>
   )

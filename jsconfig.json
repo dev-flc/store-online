@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Actions/*": ["src/store/actions/*"],
+      "Components/*": ["src/components/*"],
+      "Config/*": ["src/store/config/*"],
+      "Constants/*": ["src/constants/*"],
+      "Containers/*": ["src/containers/*"],
+      "Fonts/*": ["src/assets/fonts/*"],
+      "Hook/*": ["src/hook/*"],
+      "Images/*": ["src/assets/images/*"],
+      "Reducers/*": ["src/store/reducers/*"],
+      "Routers/*": ["src/routers/*"],
+      "Selectors/*": ["src/store/selectors/*"],
+      "Store/*": ["src/store/*"],
+      "Styles/*": ["src/assets/styles/*"],
+      "Utils/*": ["src/utils/*"],
+      "View/*": ["src/view/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    ".husky",
+    "coverage",
+    ".vscode",
+    "__test__"
+  ],
+  "include": ["src/**/*"]
+}
